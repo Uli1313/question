@@ -1,3 +1,33 @@
-.index-title {
-  font-size: 100px;
+body {
+  background: rgb(158, 158, 158);
+}
+
+.county {
+  fill: #337757;
+  stroke: rgb(255, 255, 255);
+  stroke-width: 1.5px;
+}
+
+.county:hover {
+  fill: #57a47b;
+}
+
+.icon {
+  position: absolute;
+  // 可以直接點擊到地圖，不受圖層上方的標示影響
+  pointer-events: none;
+}
+.county-label {
+  padding: 4px 20px;
+  background: #fe8541;
+  color: #fff;
+  border-radius: 50rem;
+  position: absolute;
+  pointer-events: none;
+}
+.d-none {
+  display: none;
+}
+.container {
+  position: relative;
 }

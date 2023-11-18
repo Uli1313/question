@@ -4,54 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <title>index</title>
   </head>
   <body>
     <%- include('./layout/header'); -%>
-
-    <h1 class="index-title">我是首頁</h1>
-
-    <div class="card" style="width: 18rem">
-      <img src="../assets/images/cat.jpg" class="card-img-top" alt="cat" />
-      <div class="card-body">
-        <h5 class="card-title">卡片元件</h5>
-        <p class="card-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odit, iusto odio assumenda alias id
-          nobis earum!
-        </p>
-      </div>
+    <div class="container">
+      <svg width="600" height="600"></svg>
+      <span class="material-icons icon d-none" style="color: #fe8541">
+        location_on
+      </span>
+      <span class="county-label d-none"></span>
     </div>
-
-    <!-- Modal 按鈕 -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      打開 modal
-    </button>
-
-    <!-- Modal 元件 -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal 標題</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">內容</div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-            <button type="button" class="btn btn-primary">確定</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- <h1 class="fs-4 fs-md-5 fs-lg-12">我是首頁</h1>
+    <h2 class="fs-d-7 fs-md-d-9 fs-lg-d-11">我是首頁h2</h2>
+    <h3 class="h7 fw-500">我是首頁h3</h3> -->
 
     <%- include('./layout/footer'); -%>
-
+    <script src="https://unpkg.com/topojson@3.0.2/dist/topojson.js"></script>
     <script type="module" src="../main.js"></script>
+    <script type="module" src="/assets/js/index.js"></script>
+    <!-- <script>
+      const toastElList = document.querySelectorAll(".toast");
+      const toastList = [...toastElList].map(
+        (toastEl) => new bootstrap.Toast(toastEl, option)
+      );
+      const toastTrigger = document.getElementById("liveToastBtn");
+      const toastLiveExample = document.getElementById("liveToast");
+
+      if (toastTrigger) {
+        toastTrigger.addEventListener("click", () => {
+          const toast = new bootstrap.Toast(toastLiveExample);
+          console.log(toast);
+          toast.show();
+        });
+      }
+    </script> -->
   </body>
 </html>
