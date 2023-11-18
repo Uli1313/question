@@ -32,8 +32,8 @@ function currentCounty() {
   const countyLabel = document.querySelector(".county-label");
   county.forEach((e) => {
     e.addEventListener("click", (e) => {
-      icon.style.left = `${e.offsetX - 12}px`;
-      icon.style.top = `${e.offsetY - 20}px`;
+      icon.style.left = `${e.offsetX}px`;
+      icon.style.top = `${e.offsetY - 24}px`;
       icon.classList.remove("d-none");
 
       countyLabel.style.left = `${e.offsetX - 108}px`;
@@ -43,5 +43,3 @@ function currentCounty() {
     });
   });
 }
-
-console.log(123);
