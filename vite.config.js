@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 import path from "node:path";
 import { glob } from "glob";
 // 新增
-import copy from "rollup-plugin-copy";
+// import copy from "rollup-plugin-copy";
 
 import liveReload from "vite-plugin-live-reload";
 
@@ -33,10 +33,10 @@ export default defineConfig({
     ViteEjsPlugin(),
     moveOutputPlugin(),
     // 新增
-    copy({
-      targets: [{ src: "assets/**/*.json", dest: "dist/assets" }],
-      hook: "writeBundle",
-    }),
+    // copy({
+    //   targets: [{ src: "assets/**/*.json", dest: "dist/assets" }],
+    //   hook: "writeBundle",
+    // }),
   ],
   server: {
     // 啟動 server 時預設開啟的頁面
